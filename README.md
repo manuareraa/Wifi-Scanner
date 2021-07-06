@@ -1,5 +1,5 @@
 # Wifi-Scanner
-A multithreaded tool to scan for available APs and display their Signal Strength, Security Protocol, SSID and channels. Written in Python (Scapy Module)
+A multithread tool to scan for available APs and display their Signal Strength, Security Protocol, SSID and channels. Written in Python (Scapy Module)
 
 # Demo
 
