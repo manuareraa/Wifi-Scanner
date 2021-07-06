@@ -37,9 +37,19 @@ def data_extraction(packet):
         access_points.loc[bssid] = (ssid, dBm_Signal, channel, security)
 
 #a function to print all data        
-def print():
+def print_all():
     while True:
         os.system("clear")
+        print(''' 
+        	██╗    ██╗██╗███████╗██╗    ███████╗ ██████╗ █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗ 
+		██║    ██║██║██╔════╝██║    ██╔════╝██╔════╝██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
+		██║ █╗ ██║██║█████╗  ██║    ███████╗██║     ███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
+		██║███╗██║██║██╔══╝  ██║    ╚════██║██║     ██╔══██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗
+		╚███╔███╔╝██║██║     ██║    ███████║╚██████╗██║  ██║██║ ╚████║██║ ╚████║███████╗██║  ██║
+		 ╚══╝╚══╝ ╚═╝╚═╝     ╚═╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝                
+		 Author: ManuA								Version: 1.0
+		 =====================================================================================
+        	''')
         print(access_points)
         time.sleep(0.5)
         
@@ -54,10 +64,10 @@ def channel_change():
 #main thread        
 if __name__ == "__main__":
     # interface name, check using iwconfig
-    interface = "wlan0mon"
+    interface = "wlan0"
     
     # start the thread that prints all the networks
-    printer = Thread(target=print)
+    printer = Thread(target=print_all)
     printer.daemon = True
     printer.start()
     
